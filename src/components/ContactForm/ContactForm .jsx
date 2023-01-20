@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 import { toast } from 'react-toastify';
 import css from './ContactForm.module.css';
 import PropTypes from 'prop-types';
-import { adContacts } from 'Redux/contactsSlice';
+import { adContacts } from '../../Redux/contactsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
 export const ContactForm = () => {
