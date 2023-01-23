@@ -3,10 +3,11 @@ import css from './Filter.module.css';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterAction } from '../../Redux/filterSlice';
+import { getFilter } from 'Redux/selectors';
 
 const Filter = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(state => state.filter);
+  const filter = useSelector(getFilter);
 
   const changeFilter = event => {
     dispatch(filterAction(event.target.value));
